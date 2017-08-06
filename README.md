@@ -1,6 +1,6 @@
 # vue-truffle
 
-> Vue Starter Project using Truffle and Zeppelin
+> Vue Starter Project using webpack Truffle and Zeppelin. Based on [Robust Smart Contracts with Openzeppelin](http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin) tutorial.
 
 ## Build Setup
 
@@ -10,8 +10,8 @@ npm install -g truffle
 npm install -g testrpc
 npm install
 
-# serve test network at localhost:8545
-testrpc (in another terminal window)
+# serve test network at localhost:8545 in a separate terminal
+testrpc
 
 # build and deploy contract onto network
 truffle compile

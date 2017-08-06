@@ -21,7 +21,7 @@
           <h4>Transfer</h4>
           <input type="text" class="form-control" id="TTTransferAddress" v-model='toAddress' placeholder="Address" />
           <input type="text" class="form-control" id="TTTransferAmount" v-model='toAmount' placeholder="Amount" />
-          <button class="btn btn-primary" id="transferButton" type="button" @click='transfer()'>Transfer</button>
+          <button class="btn btn-primary" id="transferButton" type="button" @click.prevent='makeTransfer()'>Transfer</button>
         </div>
       </div>
     </div>
@@ -107,6 +107,31 @@ export default {
         }).then((result) => {
           console.log(result)
           this.balance = result.c[0]
+        }).catch((err) => {
+          console.log(err.message)
+        })
+      })
+    },
+    makeTransfer () {
+      console.log('Transfer ' + this.toAmount + ' TT to ' + this.toAddress)
+
+      var tutorialTokenInstance
+
+      web3.eth.getAccounts((error, accounts) => {
+        if (error) {
+          console.log(error)
+          return
+        }
+
+        this.account = accounts[0]
+
+        this.contracts.TutorialToken.deployed().then((instance) => {
+          tutorialTokenInstance = instance
+
+          return tutorialTokenInstance.transfer(this.toAddress, this.toAmount, {from: this.account})
+        }).then((result) => {
+          alert('Transfer Successful!')
+          return this.getBalances()
         }).catch((err) => {
           console.log(err.message)
         })
