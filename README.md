@@ -1,6 +1,6 @@
 # vue-truffle
 
-> Vue Starter Project using webpack Truffle and Zeppelin. Based on [Robust Smart Contracts with Openzeppelin](http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin) tutorial.
+> Vue.js version of Truffle & Zeppelin's Tutorial [Robust Smart Contracts with Openzeppelin](http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin)
 
 ## Build Setup
 
