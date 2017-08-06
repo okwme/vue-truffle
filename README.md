@@ -6,7 +6,16 @@
 
 ``` bash
 # install dependencies
+npm install -g truffle
+npm install -g testrpc
 npm install
+
+# serve test network at localhost:8545
+testrpc (in another terminal window)
+
+# build and deploy contract onto network
+truffle compile
+truffle migrate
 
 # serve with hot reload at localhost:8080
 npm run dev

@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import axios from 'axios'
+Object.defineProperty(Vue.prototype, '$axios', {value: axios})
+
 import TruffleContract from 'truffle-contract'
 Object.defineProperty(Vue.prototype, '$TruffleContract', {value: TruffleContract})
 
