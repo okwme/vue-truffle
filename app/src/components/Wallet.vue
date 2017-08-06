@@ -64,7 +64,7 @@ export default {
       this.getContract()
     },
     getContract () {
-      var TutorialTokenArtifact = require('../../build/contracts/TutorialToken.json')
+      var TutorialTokenArtifact = require('../../../build/contracts/TutorialToken.json')
       this.contracts.TutorialToken = this.$TruffleContract(TutorialTokenArtifact)
       this.contracts.TutorialToken.setProvider(this.web3Provider)
       this.networkCheck()

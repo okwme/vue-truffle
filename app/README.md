@@ -5,10 +5,9 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+# install truffle and testrpc
 npm install -g truffle
 npm install -g testrpc
-npm install
 
 # serve test network at localhost:8545 in a separate terminal
 testrpc
@@ -16,6 +15,10 @@ testrpc
 # build and deploy contract onto network
 truffle compile
 truffle migrate
+
+# move to app and install dependencies
+cd app
+npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
